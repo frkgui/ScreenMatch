@@ -1,3 +1,5 @@
+package br.com.screenmatch.models;
+
 public class Movie {
     private String nome;
     private int releaseYear;
