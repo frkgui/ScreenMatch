@@ -4,7 +4,7 @@ public class Series extends Title {
     private int seasons;
     private int episodesNumber;
     private boolean active;
-    private int episodesTime;
+    private int episodesDuration;
 
     public int getSeasons() {
         return seasons;
@@ -30,11 +30,16 @@ public class Series extends Title {
         this.active = active;
     }
 
-    public int getEpisodesTime() {
-        return episodesTime;
+    public int getEpisodesDuration() {
+        return episodesDuration;
     }
 
-    public void setEpisodesTime(int episodesTime) {
-        this.episodesTime = episodesTime;
+    public void setEpisodesDuration(int episodesDuration) {
+        this.episodesDuration = episodesDuration;
+    }
+
+    @Override
+    public int getDurationInMinute() {
+        return seasons * episodesNumber * episodesDuration;
     }
 }
